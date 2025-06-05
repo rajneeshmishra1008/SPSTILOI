@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIVA PUBLIC SCHOOL</title>
+    <style>
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bdb5b5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #6d0c0c;
+    padding: 0.5px;
+    color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+header h1 {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 2;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(238, 230, 230);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #aa4401;
+    border-radius: 4px;
+}
+
+.hero {
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 253, 253);
+    text-align: center;
+    position: relative;
+    animation: slideImages 50s infinite;
+}
+
+@keyframes slideImages {
+    0% { background-image: url('pic1.jpg'); opacity: 1; transform: scale(1); }
+    14% { background-image: url('pic1.jpg'); opacity: 1; transform: scale(1.05); }
+    28% { background-image: url('pic2.jpg'); opacity: 1; transform: scale(1); }
+    42% { background-image: url('reception.jpg'); opacity: 1; transform: scale(1.05); }
+    57% { background-image: url('pic3.jpg'); opacity: 1; transform: scale(1); }
+    71% { background-image: url('pic4.jpg'); opacity: 1; transform: scale(1.05); }
+    85% { background-image: url('pic9.jpg'); opacity: 1; transform: scale(1); }
+    100% { background-image: url('staff.jpeg'); opacity: 1; transform: scale(1.05); }
+}
+
+.slide-container {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-size: cover; /* Ensure images cover the container */
+    background-position: center; /* Center the images */
+    background-repeat: no-repeat; /* Prevent background repetition */
+    animation: slideImages 20s infinite ease-in-out;
+    transition: background-image 2s ease-in-out, opacity 2s ease-in-out;
+    image-rendering: optimizeQuality; /* Enhance image quality */
+}
+
+
+
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease-out forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+}
+
+.hero p {
+    font-size: 24px;
+    animation: fadeIn 2s ease-in-out forwards;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+}
+
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
+
+.message {
+    background-color: rgb(215, 211, 211);
+    margin: 30px auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.message:hover {
+    transform: translateY(-10px);
+}
+
+.message h2 {
+    color: #015b9f;
+    margin-bottom: 15px;
+}
+
+.message p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.image-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.founder-image, .principal-image, .manager-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#view-more, #toggle-button {
+    background-color: #ccd3d7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto 0;
+}
+
+#view-more:hover, #toggle-button:hover {
+    background-color: #3498db;
+}
+
+footer {
+    background-color: #612615;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #f5f9f8;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:76px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
+
+.school-logo {
+    width: 90px; /* Adjust the width as needed */
+    height: auto; /* Maintains the aspect ratio based on the width */
+    max-height: 120px; /* Optional: Limits the height to a maximum value */
+    margin-right: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+
+
+<header>
+    <div class="logo-container">
+        <img src="Logo.JPEG" alt="School's Logo" class="school-logo">
+    </div>
+
+    <h1 class="school-name">SHIVA PUBLIC SCHOOL</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#admission">Admission Form</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#important-links">Important Links</a></li>
+        </ul>
+    </nav>
+</header>
+    
+    
+
+    <div class="hero">
+        
+            <div>
+                <b><h1>Welcome to SHIVA PUBLIC SCHOOL</h1></b>
+                <h2>We provide a Quality education...</h2>
+    
+            </div>
+        </div>
+    
+
+        
+
+
+
+
+    <div class="content">
+        <section id="about" class="message">
+            <h2>About Us</h2><hr>
+            <div class="image-wrapper">
+                <img src="Logo.JPEG" alt="School's Logo" class="school-logo">
+            </div>
+            <p id="about-summary">
+                Shiva Public School is an educational institution dedicated to providing a high-quality learning environment that nurtures academic excellence, personal growth, and holistic development. Located in a serene and well-connected area, the school aims to create a stimulating atmosphere where students can thrive both academically and socially.
+            </p>
+            <div id="about-details" style="display: none;">
+                <p>
+                    The school emphasizes a balanced approach to education, integrating academics with extracurricular activities, sports, and arts. It is known for its experienced faculty, modern infrastructure, and commitment to providing a safe and supportive environment for students. With a focus on innovation and inclusivity, Shiva Public School prepares students for the challenges of the future, helping them grow into confident, capable individuals.<hr></hr>
+                </p>
+            </div>
+            <button class="toggle-button" onclick="toggleMessage('about-details', this)">Read More</button>
+        </section>
+
+
+
+
+        <section id="founder-message" class="message">
+            <h2>Founder's Message</h2><hr>
+            <div class="image-wrapper">
+                <img src="Founder.JPG" alt="Founder's Image" class="founder-image">
+            </div>
+            <div id="founder-message-summary">
+                <p>
+                    Dear Students, Parents, and Esteemed Colleagues,<br><br>
+                    It is with great pride and heartfelt gratitude that I extend a warm welcome to each of you as part of the Shiva Public School family. Our journey began with a simple yet profound vision: to create a nurturing environment where students not only excel academically but also grow into compassionate and responsible individuals.
+                </p>
+                <div id="founder-message-details" style="display: none;">
+                    <p>
+                        At Shiva Public School, we are committed to fostering an educational experience that goes beyond traditional learning. Our approach integrates rigorous academic programs with opportunities for personal development, creativity, and social responsibility. We believe that education is not just about acquiring knowledge but also about cultivating the values and skills necessary to thrive in a dynamic world.
+                    </p>
+                    <p>
+                        Our dedicated team of educators and staff works tirelessly to provide an atmosphere where each student is encouraged to discover their unique strengths and pursue their passions. We are proud of our modern facilities, innovative teaching methods, and the strong sense of community that defines our school.
+                    </p>
+                    <p>
+                        We understand that a successful educational journey requires collaboration and support from all stakeholders. As founders, we are deeply invested in creating a supportive partnership with parents and guardians, ensuring that every student’s needs are met and their potential is fully realized.
+                    </p>
+                    <p>
+                        Together, we strive to make Shiva Public School a place where every child feels valued and empowered to achieve their goals. Thank you for your trust and commitment to our shared vision of excellence in education. We look forward to an enriching and successful year ahead.<br><br>
+                        Regards,<br>
+                        <b>[RK SINGH]</b><br>
+                        Founder, Shiva Public School<hr>
+                    </p>
+                </div>
+                <button class="toggle-button" onclick="toggleMessage('founder-message-details', this)">Read More</button>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section id="manager-message" class="message">
+            <h2>Manager's Message</h2><hr>
+            <div class="image-wrapper">
+                <img src="manager.jpg" alt="Manager's Image" class="manager-image">
+                
+            </div>
+            <p>
+                Dear Students, Parents, and Staff,<br><br>
+                As the Manager of Shiva Public School, I am delighted to welcome you to a new academic year. Our mission is to provide an exceptional educational experience that fosters both academic and personal growth. We believe that every student has the potential to excel and contribute positively to our community.
+            </p>
+            <div id="manager-message-details" style="display: none;">
+                <p>
+                    Our dedicated team of professionals is committed to creating a supportive and engaging environment that encourages students to achieve their best. We offer a diverse range of programs and activities designed to develop critical thinking, creativity, and leadership skills.
+                </p>
+                <p>
+                    Collaboration between the school, parents, and the community is vital to our success. We value the support and involvement of our parents and guardians and encourage open communication to ensure that every child’s needs are met.
+                </p>
+                <p>
+                    We look forward to a year of growth, learning, and success for all our students. Thank you for being a part of the Shiva Public School family. Together, we will continue to strive for excellence and make a positive impact on the lives of our students.<br><br>
+                    Regards,<br>
+                    <b>[ABHISHEK SINGH]</b><br>
+                    Manager, Shiva Public School<hr>
+                </p>
+            </div>
+            <button class="toggle-button" onclick="toggleMessage('manager-message-details', this)">Read More</button>
+        </section>
+
+
+
+
+
+        <section id="principal-message" class="message">
+            <h2>Principal's Message</h2><hr>
+            <div class="image-wrapper">
+                <img src="PRINCIPAL.JPG" alt="Principal's Image" class="principal-image">
+            </div>
+            <div id="principal-message-summary">
+                <p>
+                    Dear Students, Parents, and Guardians,<br><br>
+                    Welcome to Shiva Public School, where education goes beyond the confines of the classroom, and learning becomes a lifelong journey. It is with great pride and joy that I serve as the Principal of this esteemed institution, where we strive to create an environment that nurtures academic excellence, moral integrity, and social responsibility.
+                </p>
+                <div id="principal-message-details" style="display: none;">
+                    <p>
+                        At Shiva Public School, we believe that every child is unique, with their own set of talents and potentials. Our dedicated faculty is committed to recognizing and fostering these individual strengths, ensuring that each student receives a well-rounded education that prepares them for the challenges of the future. We emphasize not only the acquisition of knowledge but also the development of critical thinking, creativity, and compassion—skills that are essential in today’s rapidly changing world.
+                    </p>
+                    <p>
+                        We also place great importance on the values of respect, empathy, and integrity. Our students are encouraged to be kind, thoughtful, and respectful towards others, to embrace diversity, and to contribute positively to society. Through various academic, co-curricular, and extracurricular activities, we aim to instill these values, helping our students grow into responsible and enlightened global citizens.
+                    </p>
+                    <p>
+                        As we navigate through the academic year, I encourage our students to take full advantage of the opportunities presented to them. I urge parents and guardians to stay actively involved in their child's education, as your support and encouragement are vital to their success. Together, we can provide a rich and nurturing environment where our children can thrive and achieve their full potential.
+                    </p>
+                    <p>
+                        Thank you for entrusting us with your child's education. We look forward to a year of growth, learning, and achievement.<br><br>
+                        Regards,<br>
+                        <b>[SHUBHAM SINGH]</b><br>
+                        Principal, Shiva Public School<hr>
+                    </p>
+                </div>
+                <button class="toggle-button" onclick="toggleMessage('principal-message-details', this)">Read More</button>
+            </div>
+        </section>
+
+
+        <section id="contact" class="message">
+<div>
+            <h2>Contact Us</h2><hr>
+            <p><b>Address:</b> SHIVA PUBLIC SCHOOL<br>Jamodeep, Tiloi, Amethi</p>
+            <p><b>Email:</b>spsamethi2017@gmail.com</p>
+            <p><b>Phone:</b> +91-9918300393 , 9984588881</p>
+            <p><b>Follow Us:</b>
+                <a href="https://www.facebook.com/spstiloi" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com/shivapublicschooltiloi/" target="_blank">Instagram</a>
+            </p>
+        </div>
+        </section>
+        
+        
+        <section id="admission" class="message">
+            <h2>Admission Form</h2>
+            <hr>
+            <form action="admission_submit.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="class">Class:</label>
+                    <input type="text" id="class" name="class" placeholder="Enter the class you are applying for" required>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </section>
+        
+        
+        <style>
+            .admission-form {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #ece6e6;
+                border-radius: 8px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            .form-group {
+                margin-bottom: 15px;
+            }
+        
+            .form-group label {
+                display: block;
+                font-size: 16px;
+                margin-bottom: 5px;
+                color: #333;
+            }
+        
+            .form-group input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 16px;
+            }
+        
+            .form-group input:focus {
+                border-color: #2980b9;
+                outline: none;
+            }
+        
+            .submit-button {
+                background-color: #2980b9;
+                color: white;
+                border: none;
+                padding: 15px 20px;
+                font-size: 16px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                display: block;
+                width: 100%;
+            }
+        
+            .submit-button:hover {
+                background-color: #3498db;
+            }
+        </style>
+        
+    </div>
+
+
+
+
+    <section id="events" class="events-section">
+        <h2>Upcoming Events & Festivals</h2><hr>
+        <div class="events-container">
+
+
+            <div class="event-item">
+                <div class="event-date">26th Aug 2024</div>
+                <div class="event-details">
+                <h3>Krishna Janmashtami,</h3>
+                    <p>Krishna Janmashtami is a Hindu festival celebrating the birth of Lord Krishna, who is considered the eighth avatar of the god Vishnu. It is observed on the eighth day of the dark fortnight in the month of Bhadrapada (usually August or September). </p>
+                </div>
+            </div>
+
+            
+            <div class="event-item">
+                <div class="event-date">07th Sep 2024</div>
+                <div class="event-details">
+                    <h3>Ganesh Chaturthi</h3>
+                    <p>Ganesh Chaturthi is a Hindu festival celebrating the birth of Lord Ganesha, the elephant-headed god of wisdom, prosperity, and new beginnings. It usually falls in August or September, on the fourth day of the Hindu lunar month of Bhadrapada. </p>
+                </div>
+            </div>
+            <!-- Add more events as needed -->
+        </div>
+    </section>
+    <style>
+    .events-section {
+        background-color: #ecf0f1;
+        padding: 60px 20px;
+        border-radius: 15px;
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+        max-width: 800px;
+        margin: 60px auto;
+        text-align: center;
+    }
+
+    .events-section h2 {
+        font-size: 36px;
+        color: #2c3e50;
+        margin-bottom: 40px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .events-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        justify-items: center;
+    }
+
+    .event-item {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-date {
+        font-size: 20px;
+        color: #3498db;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .event-details h3 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .event-details p {
+        font-size: 16px;
+        color: #555;
+        margin: 0;
+    }
+</style>
+    
+
+<section id="gallery" class="gallery-section">
+    <h2>Gallery</h2><hr>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="pic1.jpg" alt="Gallery Image 1" data-fullscreen="pic1.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="pic4.jpg" alt="Gallery Image 2" data-fullscreen="pic4.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="pic7.jpg" alt="Gallery Image 3" data-fullscreen="pic7.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="staff.jpeg" alt="Gallery Image 4" data-fullscreen="staff.jpeg">
+        </div>
+        <div class="gallery-item">
+            <img src="pic9.jpg" alt="Gallery Image 5" data-fullscreen="pic9.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="pic8.jpg" alt="Gallery Image 6" data-fullscreen="pic8.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="pic2.jpg" alt="Gallery Image 7" data-fullscreen="pic2.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="pic3.jpg" alt="Gallery Image 8" data-fullscreen="pic3.jpg">
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Gallery Section Styles */
+    .gallery-section {
+        background-color: #f6ebeb;
+        padding: 60px 20px;
+        border-radius: 15px;
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+        max-width: 1000px;
+        margin: 60px auto;
+        text-align: center;
+    }
+
+    .gallery-section h2 {
+        font-size: 36px;
+        color: #2c3e50;
+        margin-bottom: 40px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery-item {
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .gallery-item img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        flex-direction: column;
+    }
+
+    .lightbox.active {
+        display: flex;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease, left 0.3s ease, top 0.3s ease;
+        position: relative;
+    }
+
+    /* Zoom Controls */
+    .zoom-controls {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .zoom-button {
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-size: 20px; /* Adjust the size of the symbols */
+        color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px; /* Adjust the width of the buttons */
+        height: 40px; /* Adjust the height of the buttons */
+    }
+
+    .zoom-button:focus {
+        outline: none;
+    }
+
+    /* Movement Controls */
+    .movement-controls {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .move-button {
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-size: 20px; /* Adjust the size of the symbols */
+        color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px; /* Adjust the width of the buttons */
+        height: 40px; /* Adjust the height of the buttons */
+    }
+</style>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Create lightbox element
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = document.createElement('img');
+    lightbox.appendChild(lightboxImg);
+
+    // Create zoom controls
+    const zoomControls = document.createElement('div');
+    zoomControls.className = 'zoom-controls';
+    lightbox.appendChild(zoomControls);
+
+    const zoomInBtn = document.createElement('button');
+    zoomInBtn.className = 'zoom-button';
+    zoomInBtn.textContent = '+';
+    zoomControls.appendChild(zoomInBtn);
+
+    const zoomOutBtn = document.createElement('button');
+    zoomOutBtn.className = 'zoom-button';
+    zoomOutBtn.textContent = '-';
+    zoomControls.appendChild(zoomOutBtn);
+
+    // Create movement controls
+    const movementControls = document.createElement('div');
+    movementControls.className = 'movement-controls';
+    lightbox.appendChild(movementControls);
+
+    const moveLeftBtn = document.createElement('button');
+    moveLeftBtn.className = 'move-button';
+    moveLeftBtn.textContent = '←';
+    movementControls.appendChild(moveLeftBtn);
+
+    const moveRightBtn = document.createElement('button');
+    moveRightBtn.className = 'move-button';
+    moveRightBtn.textContent = '→';
+    movementControls.appendChild(moveRightBtn);
+
+    const moveUpBtn = document.createElement('button');
+    moveUpBtn.className = 'move-button';
+    moveUpBtn.textContent = '↑';
+    movementControls.appendChild(moveUpBtn);
+
+    const moveDownBtn = document.createElement('button');
+    moveDownBtn.className = 'move-button';
+    moveDownBtn.textContent = '↓';
+    movementControls.appendChild(moveDownBtn);
+
+    let scale = 1;
+    const zoomStep = 0.1;
+    const moveStep = 10;
+    let zoomInterval;
+
+    // Handle image click
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', function() {
+            lightboxImg.src = this.dataset.fullscreen;
+            scale = 1; // Reset zoom scale
+            lightboxImg.style.transform = `scale(${scale})`;
+            lightboxImg.style.left = '0';
+            lightboxImg.style.top = '0';
+            lightbox.classList.add('active');
+        });
+    });
+
+    // Double-click to zoom in
+    lightboxImg.addEventListener('dblclick', function() {
+        zoomIn();
+    });
+
+    // Right-click to zoom out (prevent context menu)
+    lightboxImg.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // Prevent the context menu from opening
+        zoomOut();
+    });
+
+    // Close lightbox on click
+    lightbox.addEventListener('click', function(event) {
+        if (event.target === lightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
+
+    // Zoom in and out functionality
+    function zoomIn() {
+        scale += zoomStep;
+        lightboxImg.style.transform = `scale(${scale})`;
+    }
+
+    function zoomOut() {
+        scale = Math.max(1, scale - zoomStep); // Prevent zooming out too much
+        lightboxImg.style.transform = `scale(${scale})`;
+    }
+
+    zoomInBtn.addEventListener('mousedown', function() {
+        zoomInterval = setInterval(zoomIn, 100); // Adjust the interval as needed
+    });
+
+    zoomInBtn.addEventListener('mouseup', function() {
+        clearInterval(zoomInterval);
+    });
+
+    zoomInBtn.addEventListener('mouseleave', function() {
+        clearInterval(zoomInterval);
+    });
+
+    zoomOutBtn.addEventListener('mousedown', function() {
+        zoomInterval = setInterval(zoomOut, 100); // Adjust the interval as needed
+    });
+
+    zoomOutBtn.addEventListener('mouseup', function() {
+        clearInterval(zoomInterval);
+    });
+
+    zoomOutBtn.addEventListener('mouseleave', function() {
+        clearInterval(zoomInterval);
+    });
+
+    // Move image functionality
+    let offsetX = 0;
+    let offsetY = 0;
+
+    moveLeftBtn.addEventListener('click', function() {
+        offsetX -= moveStep;
+        lightboxImg.style.left = `${offsetX}px`;
+    });
+
+    moveRightBtn.addEventListener('click', function() {
+        offsetX += moveStep;
+        lightboxImg.style.left = `${offsetX}px`;
+    });
+
+    moveUpBtn.addEventListener('click', function() {
+        offsetY -= moveStep;
+        lightboxImg.style.top = `${offsetY}px`;
+    });
+
+    moveDownBtn.addEventListener('click', function() {
+        offsetY += moveStep;
+        lightboxImg.style.top = `${offsetY}px`;
+    });
+});
+
+</script>
+
+
+
+<!-- Facilities Section -->
+<section id="facilities" style="padding: 70px 0; background-color: #f1dcdc;">
+    <div style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-size: 3em; font-weight: 700; color: #2c3e50; text-transform: uppercase; letter-spacing: 2px;">Our Facilities</h2><hr>
+        <hr style="width: 80px; border: 2px solid #2980b9; margin: 20px auto;">
+        <p style="font-size: 1.2em; color: #021314; max-width: 700px; margin: 0 auto;">At SHIVA PUBLIC SCHOOL, we pride ourselves on providing a nurturing environment with top-notch facilities that support both academic and extracurricular excellence.</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 50px;">
+        <!-- Facility 1 -->
+        <div style="flex-basis: 30%; background-color: #fff; padding: 25px; margin: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); border-radius: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <img src="science.jpg" alt="Science Lab" style="width: 100%; border-radius: 15px;">
+            <h3 style="font-size: 1.8em; color: #2c3e50; margin-top: 20px;">Science Labs</h3>
+            <p style="color: #7f8c8d;">Our science labs are equipped with cutting-edge technology to encourage innovative learning and discovery.</p>
+        </div>
+        <!-- Facility 2 -->
+        <div style="flex-basis: 30%; background-color: #fff; padding: 25px; margin: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); border-radius: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <img src="Library.jpg" alt="Library" style="width: 100%; border-radius: 15px;">
+            <h3 style="font-size: 1.8em; color: #2c3e50; margin-top: 20px;">Comprehensive Library</h3>
+            <p style="color: #7f8c8d;">Our library offers a diverse collection of books, journals, and digital resources to support all learning styles.</p>
+        </div>
+        <!-- Facility 3 -->
+        <div style="flex-basis: 30%; background-color: #fff; padding: 25px; margin: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); border-radius: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <img src="sport.jpg" alt="Sports Complex" style="width: 100%; border-radius: 15px;">
+            <h3 style="font-size: 1.8em; color: #2c3e50; margin-top: 20px;">Expansive Sports Complex</h3>
+            <p style="color: #7f8c8d;">Our sports facilities include fields and courts for various sports, fostering teamwork and physical fitness.</p>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 60px;">
+        <a href="facility.html" style="text-decoration: none; color: #fff; background-color: #2980b9; padding: 15px 35px; border-radius: 8px; font-size: 1.3em; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); transition: background-color 0.3s, box-shadow 0.3s;">Learn More</a>
+    </div>
+</section>
+
+
+
+
+
+<section id="important-links" class="important-links-section">
+    <h2>Important Links</h2><hr>
+    <ul class="links-list">
+        <li><a href="https://youtu.be/Sx8C_CGwhcE?si=1i1T_zoiSJ1W8nXG" target="_blank">School Video</a></li>
+        <li><a href="https://youtu.be/hRRB-EnBD9Q?si=o-lEdqVwC7IW2QDx" target="_blank">Inspection Video</a></li>
+        <li><a href="https://youtu.be/id_4b9L2YgY?si=W7tPRtzXmwqD0BUf" target="_blank">Campus Tour</a></li>
+        
+        <!-- Add more links as needed -->
+    </ul>
+</section>
+<style>.important-links-section {
+    background-color: #eef2f5;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.important-links-section h2 {
+    font-size: 28px;
+    color: #34495e;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.links-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-list li {
+    margin: 10px 0;
+}
+
+.links-list a {
+    text-decoration: none;
+    color: #2980b9;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.links-list a:hover {
+    color: #3498db;
+}
+</style>
+    
+
+
+
+    
+        
+    </div>
+
+
+        <footer>
+            <class="footer-content">
+                
+                    <p class="copyright">&copy; 2024 Shiva Public School. All rights reserved.</p>
+                    <hr> 
+                    
+                    <p><b>Developed by:-</b>TriUnity Web Solutions</p>
+                    <p>Bakshi Ka Talab, Lucknow, UP</p>
+                    <p><b>Email:</b> info@triunitywebsolutions.com</p>
+                    <p><b>Phone:</b> 8948277840, 9795334608</p>
+                   
+                    <a
+                    href="https://www.instagram.com/triunity_web_solutions?igsh=MWw2dmJpbHpwbHAzbA=="
+                    target="_blank"
+                    class="home__social-icon"
+                  >
+                    <i class="uil uil-instagram-alt home__icon"></i> Instagram
+                  </a>
+                  
+                  <style>
+                    .home__social-icon {
+                      font-size: 24px;           /* Adjusts icon size */
+                      color: #dd3c3c;            /* Instagram's brand color */
+                      transition: transform 0.3s ease, color 0.3s ease;
+                      text-decoration: none;     /* Removes underline from the link */
+                      margin-right: 10px;        /* Adds spacing if there are multiple icons */
+                      display: inline-flex;      /* Ensures icon and text align well */
+                      align-items: center;
+                      gap: 8px;                  /* Space between icon and text */
+                    }
+                  
+                    .home__social-icon:hover {
+                      color: #6d0808;            /* Slight color change on hover */
+                      transform: scale(1.1);     /* Slightly enlarge on hover */
+                    }
+                  
+                    .home__icon {
+                      font-size: inherit;        /* Ensures the icon inherits the size of its parent */
+                    }
+                  </style>
+                  
+                       
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <script>
+        function toggleMoreContent() {
+            const moreContent = document.getElementById('more-content');
+            const button = document.getElementById('view-more');
+            if (moreContent.style.display === 'none') {
+                moreContent.style.display = 'block';
+                button.textContent = 'View Less';
+            } else {
+                moreContent.style.display = 'none';
+                button.textContent = 'View More';
+            }
+        }
+
+        function toggleMessage(id, button) {
+            const messageDetails = document.getElementById(id);
+            if (messageDetails.style.display === 'none') {
+                messageDetails.style.display = 'block';
+                button.textContent = 'Read Less';
+            } else {
+                messageDetails.style.display = 'none';
+                button.textContent = 'Read More';
+            }
+        }
+    </script>
+</body>
+</html>
