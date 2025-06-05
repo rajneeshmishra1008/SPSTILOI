@@ -14,54 +14,122 @@ body {
     line-height: 1.6;
 }
 
+<style>
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styling */
 header {
-    background-color: #6d0c0c;
-    padding: 0.5px;
-    color: rgb(255, 255, 255);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
+  background-color: #6d0c0c;
+  padding: 0.5px 20px;
+  color: rgb(255, 255, 255);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
 }
 
+/* Logo / Title */
 header h1 {
-    margin: 0;
-    flex: 1;
-    text-align: center;
-    font-weight: bold;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
 }
 
-
+/* Navigation */
+nav {
+  flex: 2;
+}
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    flex: 2;
-    text-align: center;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+  display: inline-block;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: rgb(238, 230, 230);
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
+  color: rgb(238, 230, 230);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #aa4401;
-    border-radius: 4px;
+  background-color: #aa4401;
+  border-radius: 4px;
 }
+
+/* Hamburger Menu - Hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+  background: none;
+  border: none;
+}
+
+/* Responsive: Mobile View */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
+    background-color: #6d0c0c;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin: 10px 0;
+    flex-basis: 100%;
+  }
+}
+</style>
+
 
 .hero {
     height: 650px;
@@ -248,7 +316,7 @@ footer a:hover {
     </div>
 
     <h1 class="school-name">SHIVA PUBLIC SCHOOL</h1>
-
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
         <ul>
             <li><a href="#about">About Us</a></li>
@@ -262,7 +330,13 @@ footer a:hover {
     </nav>
 </header>
     
-    
+    <script>
+  function toggleMenu() {
+    const nav = document.getElementById('navMenu');
+    nav.classList.toggle('active');
+  }
+</script>
+
 
     <div class="hero">
         
